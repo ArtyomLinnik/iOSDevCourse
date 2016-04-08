@@ -13,6 +13,8 @@
 		9108C61E1CB63C90003DDDFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9108C61C1CB63C90003DDDFA /* Main.storyboard */; };
 		9108C6201CB63C90003DDDFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9108C61F1CB63C90003DDDFA /* Assets.xcassets */; };
 		9108C6231CB63C90003DDDFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9108C6211CB63C90003DDDFA /* LaunchScreen.storyboard */; };
+		9108C62C1CB652F9003DDDFA /* ALPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9108C62B1CB652F9003DDDFA /* ALPatient.m */; };
+		9108C62F1CB6FA2E003DDDFA /* ALDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9108C62E1CB6FA2E003DDDFA /* ALDoctor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		9108C61F1CB63C90003DDDFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9108C6221CB63C90003DDDFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9108C6241CB63C90003DDDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9108C62A1CB652F9003DDDFA /* ALPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPatient.h; sourceTree = "<group>"; };
+		9108C62B1CB652F9003DDDFA /* ALPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPatient.m; sourceTree = "<group>"; };
+		9108C62D1CB6FA2E003DDDFA /* ALDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDoctor.h; sourceTree = "<group>"; };
+		9108C62E1CB6FA2E003DDDFA /* ALDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDoctor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,12 @@
 		9108C6121CB63C90003DDDFA /* DelegatesTest */ = {
 			isa = PBXGroup;
 			children = (
+				9108C62A1CB652F9003DDDFA /* ALPatient.h */,
+				9108C62B1CB652F9003DDDFA /* ALPatient.m */,
 				9108C6161CB63C90003DDDFA /* AppDelegate.h */,
 				9108C6171CB63C90003DDDFA /* AppDelegate.m */,
+				9108C62D1CB6FA2E003DDDFA /* ALDoctor.h */,
+				9108C62E1CB6FA2E003DDDFA /* ALDoctor.m */,
 				9108C6191CB63C90003DDDFA /* ViewController.h */,
 				9108C61A1CB63C90003DDDFA /* ViewController.m */,
 				9108C61C1CB63C90003DDDFA /* Main.storyboard */,
@@ -152,6 +162,8 @@
 				9108C61B1CB63C90003DDDFA /* ViewController.m in Sources */,
 				9108C6181CB63C90003DDDFA /* AppDelegate.m in Sources */,
 				9108C6151CB63C90003DDDFA /* main.m in Sources */,
+				9108C62C1CB652F9003DDDFA /* ALPatient.m in Sources */,
+				9108C62F1CB6FA2E003DDDFA /* ALDoctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

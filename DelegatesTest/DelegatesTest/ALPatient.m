@@ -10,4 +10,25 @@
 
 @implementation ALPatient
 
+- (BOOL) howAreYou
+{
+    BOOL iFeelGood = arc4random() % 2;
+    
+    if (!iFeelGood) {
+        [self.delegate patientFeelsBad:self];
+    }
+    
+    return iFeelGood;
+}
+- (void) takePill
+{
+    NSLog(@"%@ takes pill", self.name);
+}
+- (void) makeShot
+{
+    NSLog(@"%@ makes shot", self.name);
+}
+
 @end
+
+

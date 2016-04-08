@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ALPatient.h"
 
-@interface ALDoctor : NSObject
+@interface ALDoctor : NSObject <ALPatientDeligate>
 
 @end
