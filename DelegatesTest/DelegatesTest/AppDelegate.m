@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ALDoctor.h"
 #import "ALPatient.h"
+#import "ALBadDoctor.h"
 
 //@interface AppDelegate ()
 //
@@ -19,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    /*
     ALPatient* patient1 = [[ALPatient alloc] init];
     patient1.name = @"Vova";
     patient1.temperature = 36.6f;
@@ -37,6 +38,39 @@
     NSLog(@"%@ are you ok? %@", patient1.name, [patient1 howAreYou] ? @"YES" : @"NO");
     
     NSLog(@"%@ are you ok? %@", patient2.name, [patient2 howAreYou] ? @"YES" : @"NO");
+    */
+    
+    NSArray* arrayName = [NSArray arrayWithObjects:@"Vasya", @"Denis", @"Tanja", @"Masha", @"Katya", nil];
+    NSMutableArray* arrayPatient = [NSMutableArray array];
+    
+    ALDoctor* doctor = [[ALDoctor alloc] init];
+    ALBadDoctor* badDoctor = [[ALBadDoctor alloc] init];
+    
+    CGFloat isBadDoctor;
+    
+    for (int i=0; i<15; i++) {
+        ALPatient* patient = [[ALPatient alloc] init];
+        patient.name = [NSString stringWithFormat:@"%@", [arrayName objectAtIndex:arc4random()%5]];
+        isBadDoctor = arc4random() % 11;
+        if (isBadDoctor < 3) {
+            patient.delegate = badDoctor;
+        } else patient.delegate = doctor;
+        [arrayPatient addObject:patient];
+    }
+    
+    for (ALPatient* patient in arrayPatient) {
+        [patient goToDoctor];
+    }
+    
+    [doctor report];
+    
+    for (ALPatient* patient in arrayPatient ) {
+        if (patient.mark == NO) patient.delegate = doctor;
+    }
+    
+    for (ALPatient* patient in arrayPatient) {
+        [patient goToDoctor];
+    }
     
     return YES;
 }

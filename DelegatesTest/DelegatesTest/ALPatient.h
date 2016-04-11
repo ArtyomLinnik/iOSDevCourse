@@ -12,7 +12,7 @@ typedef enum
 {
     ALHeadAche,
     ALHandPain,
-    ALStomaсhPain,
+    ALStomachPain,
     ALLegPain
     
 } ALAche;
@@ -25,18 +25,24 @@ typedef enum
 @property (strong, nonatomic) NSString* name;
 @property (assign, nonatomic) float temperature;
 @property (weak, nonatomic) id <ALPatientDeligate> delegate;
-@property (assign, nonatomic) short mark;
+@property (assign, nonatomic) BOOL mark;
+@property (assign, nonatomic) float neusea;
 
-
+- (void) goToDoctor;
 - (BOOL) howAreYou;
 - (void) takePill;
 - (void) makeShot;
+- (void) takeNeuseaPill;
+- (void) putGypsum;
+- (void) temperatureUp;
+- (void) temperatureDown;
+
 
 @end
 
 @protocol ALPatientDeligate
 @required
-- (void) patientFeelsBad:(ALPatient*) patient;
+- (void) patientFeelsBad:(ALPatient*) patient withAche:(ALAche) ache;
 - (void) patient:(ALPatient*) patient hasQuestion:(NSString*) question;
 
 

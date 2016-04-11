@@ -11,12 +11,17 @@
 
 @implementation ALPatient
 
+- (void) goToDoctor
+{
+    [self.delegate patientFeelsBad:self withAche:arc4random() % 4];
+}
+
 - (BOOL) howAreYou
 {
     BOOL iFeelGood = arc4random() % 2;
     
     if (!iFeelGood) {
-        [self.delegate patientFeelsBad:self];
+        [self.delegate patientFeelsBad:self withAche:arc4random() % 4];
     }
     
     return iFeelGood;
@@ -29,6 +34,28 @@
 {
     NSLog(@"%@ makes shot", self.name);
 }
+
+- (void) putGypsum
+{
+    NSLog(@"%@ put gypsum", self.name);
+}
+
+- (void) takeNeuseaPill
+{
+    NSLog(@"%@ takes neusea pill", self.name);
+}
+
+- (void) temperatureUp
+{
+    NSLog(@"temperature >= 38,5, %@ should makes shot", self.name);
+}
+
+- (void) temperatureDown
+{
+    NSLog(@"temperature < 38,5, %@ should rest", self.name);
+}
+
+
 
 @end
 
