@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    ALHeadAche,
+    ALHandPain,
+    ALStomaсhPain,
+    ALLegPain
+    
+} ALAche;
+
 @protocol ALPatientDeligate;
 
 
@@ -16,6 +25,8 @@
 @property (strong, nonatomic) NSString* name;
 @property (assign, nonatomic) float temperature;
 @property (weak, nonatomic) id <ALPatientDeligate> delegate;
+@property (assign, nonatomic) short mark;
+
 
 - (BOOL) howAreYou;
 - (void) takePill;
