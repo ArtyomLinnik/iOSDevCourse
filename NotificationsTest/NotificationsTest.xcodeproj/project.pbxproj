@@ -13,6 +13,8 @@
 		9105CB8E1CC1227000A916AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9105CB8C1CC1227000A916AE /* Main.storyboard */; };
 		9105CB901CC1227000A916AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9105CB8F1CC1227000A916AE /* Assets.xcassets */; };
 		9105CB931CC1227000A916AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9105CB911CC1227000A916AE /* LaunchScreen.storyboard */; };
+		911D57941CCACB0F0080781E /* ALGovernment.m in Sources */ = {isa = PBXBuildFile; fileRef = 911D57931CCACB0F0080781E /* ALGovernment.m */; };
+		918061721CCF3AA2007B9D37 /* ALBuissnessMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 918061711CCF3AA2007B9D37 /* ALBuissnessMan.m */; };
 		91F87F4E1CC6C45300685130 /* ALDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F87F4D1CC6C45300685130 /* ALDoctor.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,10 @@
 		9105CB8F1CC1227000A916AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9105CB921CC1227000A916AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9105CB941CC1227000A916AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		911D57921CCACB0F0080781E /* ALGovernment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGovernment.h; sourceTree = "<group>"; };
+		911D57931CCACB0F0080781E /* ALGovernment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGovernment.m; sourceTree = "<group>"; };
+		918061701CCF3AA2007B9D37 /* ALBuissnessMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALBuissnessMan.h; sourceTree = "<group>"; };
+		918061711CCF3AA2007B9D37 /* ALBuissnessMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBuissnessMan.m; sourceTree = "<group>"; };
 		91F87F4C1CC6C45300685130 /* ALDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDoctor.h; sourceTree = "<group>"; };
 		91F87F4D1CC6C45300685130 /* ALDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDoctor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,8 +67,12 @@
 		9105CB821CC1227000A916AE /* NotificationsTest */ = {
 			isa = PBXGroup;
 			children = (
+				918061701CCF3AA2007B9D37 /* ALBuissnessMan.h */,
+				918061711CCF3AA2007B9D37 /* ALBuissnessMan.m */,
 				91F87F4C1CC6C45300685130 /* ALDoctor.h */,
 				91F87F4D1CC6C45300685130 /* ALDoctor.m */,
+				911D57921CCACB0F0080781E /* ALGovernment.h */,
+				911D57931CCACB0F0080781E /* ALGovernment.m */,
 				9105CB861CC1227000A916AE /* AppDelegate.h */,
 				9105CB871CC1227000A916AE /* AppDelegate.m */,
 				9105CB891CC1227000A916AE /* ViewController.h */,
@@ -155,9 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9105CB8B1CC1227000A916AE /* ViewController.m in Sources */,
+				911D57941CCACB0F0080781E /* ALGovernment.m in Sources */,
 				91F87F4E1CC6C45300685130 /* ALDoctor.m in Sources */,
 				9105CB881CC1227000A916AE /* AppDelegate.m in Sources */,
 				9105CB851CC1227000A916AE /* main.m in Sources */,
+				918061721CCF3AA2007B9D37 /* ALBuissnessMan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

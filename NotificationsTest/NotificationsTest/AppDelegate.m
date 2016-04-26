@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "ALDoctor.h"
+#import "ALGovernment.h"
+#import "ALBuissnessMan.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) ALGovernment* government;
 @end
 
 @implementation AppDelegate
@@ -18,11 +21,54 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(governmentNotification:)
+                                                 name:ALGovernmentTaxLevelDidChangeNotification
+                                               object:nil];
+    
+    self.government = [[ALGovernment alloc] init];
+    
+    ALBuissnessMan* buissnesman = [[ALBuissnessMan alloc] init];
+    ALDoctor* doctor1 = [[ALDoctor alloc] init];
+    ALDoctor* doctor2 = [[ALDoctor alloc] init];
+    ALDoctor* doctor3 = [[ALDoctor alloc] init];
+    ALDoctor* doctor4 = [[ALDoctor alloc] init];
+    ALDoctor* doctor5 = [[ALDoctor alloc] init];
+    
+    buissnesman.taxLevel = self.government.taxLevel;
+    
+    doctor1.salary = doctor2.salary = doctor3.salary = doctor4.salary = doctor5.salary = self.government.salary;
+    
+    
+    self.government.taxLevel = 5.5f;
+    self.government.salary = 1100;
+    self.government.averagePrice = 15;
+    self.government.pension = 550;
+    
+    
+    self.government.salary = 1050;
+    
+    self.government.salary = 1150;
+    
+    
+    self.government.salary = 900;
+
     
     
     
     return YES;
+}
+
+- (void) governmentNotification:(NSNotification*) notification {
+    
+    //NSLog(@"governmentNotification userInfo = %@", notification.userInfo);
+    
+}
+
+
+- (void) dealloc {
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:ASGovernmentTaxLevelDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
