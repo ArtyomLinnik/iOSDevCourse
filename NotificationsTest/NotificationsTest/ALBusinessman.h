@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ALBuissnessMan : NSObject
+@interface ALBusinessman : NSObject
 
 @property (assign, nonatomic) float taxLevel;
+@property (assign, nonatomic) float averagePrice;
+@property (strong, nonatomic) NSString* name;
+@property (assign, nonatomic) float inflation;
 
 @end

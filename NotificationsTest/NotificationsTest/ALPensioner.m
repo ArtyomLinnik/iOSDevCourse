@@ -1,16 +1,15 @@
 //
-//  ALDoctor.m
+//  ALPensioner.m
 //  NotificationsTest
 //
-//  Created by Artyom Linnik on 19/04/16.
+//  Created by Artyom Linnik on 03/05/16.
 //  Copyright © 2016 Artyom Linnik. All rights reserved.
 //
 
-#import "ALDoctor.h"
+#import "ALPensioner.h"
 #import "ALGovernment.h"
 
-@implementation ALDoctor
-
+@implementation ALPensioner
 
 #pragma mark - Initialization
 
@@ -21,8 +20,8 @@
         NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
         
         [nc addObserver:self
-               selector:@selector(salaryChangedNotification:)
-                   name:ALGovernmentSalaryDidChangeNotification
+               selector:@selector(pensionChangedNotification:)
+                   name:ALGovernmentPensionDidChangeNotification
                  object:nil];
         
         [nc addObserver:self
@@ -31,40 +30,38 @@
                  object:nil];
         
         [nc addObserver:self
-               selector:@selector(ALDoctorDidEnterBackgroundNotification:)
+               selector:@selector(ALPensionerDidEnterBackgroundNotification:)
                    name:UIApplicationDidEnterBackgroundNotification
                  object:nil];
         
         [nc addObserver:self
-               selector:@selector(ALDoctorWillEnterForegroundNotification:)
+               selector:@selector(ALPensionerWillEnterForegroundNotification:)
                    name:UIApplicationWillEnterForegroundNotification
                  object:nil];
-        
     }
     return self;
 }
 
 - (void) dealloc {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Notification
 
-- (void) salaryChangedNotification: (NSNotification*) notification {
+- (void) pensionChangedNotification: (NSNotification*) notification {
     
-    float salary = [notification.userInfo[ALGovernmentSalaryUserInfoKey] floatValue];
+    float pension = [notification.userInfo[ALGovernmentPensionUserInfoKey] floatValue];
     
-    float salaryVariationPercent = (self.salary == 0) ? 0 : (salary/self.salary-1)*100;
+    float pensionVariationPercent = (self.pension == 0) ? 0 : (pension/self.pension-1)*100;
     
-    float incomeChangesPercent = salaryVariationPercent - self.inflation;
+    float incomeChangesPercent = pensionVariationPercent - self.inflation;
     
-    NSLog(@"%@: my salary changed on %6.2f%%, inflation was %6.2f%%, my income changed on %6.2f%%",
-          self.name, salaryVariationPercent,
+    NSLog(@"%@: my pension changed on %6.2f%%, inflation was %6.2f%%, my income changed on %6.2f%%",
+          self.name, pensionVariationPercent,
           self.inflation,
           incomeChangesPercent);
     
-    self.salary = salary;
+    self.pension = pension;
     
 }
 
@@ -79,15 +76,19 @@
     self.inflation = variationPercent;
     
     //NSLog(@"%@: inflation was %6.2f %%", self.name, variationPercent);
+    
 }
 
-
-- (void) ALDoctorDidEnterBackgroundNotification: (NSNotification*) notification {
-    NSLog(@"%@ is going home.", self.name);
+- (void) ALPensionerDidEnterBackgroundNotification: (NSNotification*) notification {
+    
+    NSLog(@"%@ goes on veterans meeting.", self.name);
+    
 }
 
-- (void) ALDoctorWillEnterForegroundNotification: (NSNotification*) notification {
-    NSLog(@"%@ backed to work.", self.name);
+- (void) ALPensionerWillEnterForegroundNotification: (NSNotification*) notification {
+    
+    NSLog(@"%@ returned to big politics.", self.name);
+    
 }
 
 @end

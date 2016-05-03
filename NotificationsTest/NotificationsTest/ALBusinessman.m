@@ -1,16 +1,15 @@
 //
-//  ALDoctor.m
+//  ALBuissnessMan.m
 //  NotificationsTest
 //
-//  Created by Artyom Linnik on 19/04/16.
+//  Created by Artyom Linnik on 26/04/16.
 //  Copyright © 2016 Artyom Linnik. All rights reserved.
 //
 
-#import "ALDoctor.h"
+#import "ALBusinessman.h"
 #import "ALGovernment.h"
 
-@implementation ALDoctor
-
+@implementation ALBusinessman
 
 #pragma mark - Initialization
 
@@ -21,8 +20,8 @@
         NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
         
         [nc addObserver:self
-               selector:@selector(salaryChangedNotification:)
-                   name:ALGovernmentSalaryDidChangeNotification
+               selector:@selector(taxLevelChangedNotification:)
+                   name:ALGovernmentTaxLevelDidChangeNotification
                  object:nil];
         
         [nc addObserver:self
@@ -31,12 +30,12 @@
                  object:nil];
         
         [nc addObserver:self
-               selector:@selector(ALDoctorDidEnterBackgroundNotification:)
+               selector:@selector(ALBusinessmanDidEnterBackgroundNotification:)
                    name:UIApplicationDidEnterBackgroundNotification
                  object:nil];
         
         [nc addObserver:self
-               selector:@selector(ALDoctorWillEnterForegroundNotification:)
+               selector:@selector(ALBusinessmanWillEnterForegroundNotification:)
                    name:UIApplicationWillEnterForegroundNotification
                  object:nil];
         
@@ -45,26 +44,25 @@
 }
 
 - (void) dealloc {
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Notification
 
-- (void) salaryChangedNotification: (NSNotification*) notification {
+- (void) taxLevelChangedNotification: (NSNotification*) notification {
     
-    float salary = [notification.userInfo[ALGovernmentSalaryUserInfoKey] floatValue];
+    float taxLevel = [notification.userInfo[ALGovernmentTaxLevelUserInfoKey] floatValue];
     
-    float salaryVariationPercent = (self.salary == 0) ? 0 : (salary/self.salary-1)*100;
+    float taxLevelVariationPercent = (self.taxLevel == 0) ? 0 : (taxLevel/self.taxLevel-1)*100;
     
-    float incomeChangesPercent = salaryVariationPercent - self.inflation;
+    float incomeChangesPercent = self.inflation - taxLevelVariationPercent;
     
-    NSLog(@"%@: my salary changed on %6.2f%%, inflation was %6.2f%%, my income changed on %6.2f%%",
-          self.name, salaryVariationPercent,
+    NSLog(@"%@: tax level changed on %6.2f%%, income changed on %6.2f%%, my profit changed to %6.2f%%",
+          self.name, taxLevelVariationPercent,
           self.inflation,
           incomeChangesPercent);
     
-    self.salary = salary;
+    self.taxLevel = taxLevel;
     
 }
 
@@ -81,13 +79,16 @@
     //NSLog(@"%@: inflation was %6.2f %%", self.name, variationPercent);
 }
 
-
-- (void) ALDoctorDidEnterBackgroundNotification: (NSNotification*) notification {
-    NSLog(@"%@ is going home.", self.name);
+- (void) ALBusinessmanDidEnterBackgroundNotification: (NSNotification*) notification {
+    
+    NSLog(@"%@ goes to the lunch.", self.name);
+    
 }
 
-- (void) ALDoctorWillEnterForegroundNotification: (NSNotification*) notification {
-    NSLog(@"%@ backed to work.", self.name);
+- (void) ALBusinessmanWillEnterForegroundNotification: (NSNotification*) notification {
+    
+    NSLog(@"%@ come back to the office.", self.name);
+    
 }
 
 @end

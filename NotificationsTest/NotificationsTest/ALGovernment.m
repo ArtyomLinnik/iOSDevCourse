@@ -28,6 +28,18 @@ NSString* const ALGovernmentAveragePriceUserInfoKey = @"ALGovernmentAveragePrice
         _salary = 1000;
         _pension = 500;
         _averagePrice = 10.f;
+        
+        NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+        
+        [nc addObserver:self
+               selector:@selector(ALGovernmentDidEnterBackgroundNotification:)
+                   name:UIApplicationDidEnterBackgroundNotification
+                 object:nil];
+        
+        [nc addObserver:self
+               selector:@selector(ALGovernmentWillEnterForegroundNotification:)
+                   name:UIApplicationWillEnterForegroundNotification
+                 object:nil];
     }
     return self;
 }
@@ -76,7 +88,17 @@ NSString* const ALGovernmentAveragePriceUserInfoKey = @"ALGovernmentAveragePrice
     
 }
 
+- (void) ALGovernmentDidEnterBackgroundNotification: (NSNotification*) notification {
+    
+    NSLog(@"Government is going down.");
+    
+}
 
+- (void) ALGovernmentWillEnterForegroundNotification: (NSNotification*) notification {
+    
+    NSLog(@"Government is rising up.");
+    
+}
 
 
 @end
