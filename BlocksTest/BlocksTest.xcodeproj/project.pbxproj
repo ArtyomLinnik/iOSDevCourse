@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		913899E31CDDFF45003BC324 /* ALObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 913899E21CDDFF45003BC324 /* ALObject.m */; };
+		913899E61CDE2C68003BC324 /* ALStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 913899E51CDE2C68003BC324 /* ALStudent.m */; };
 		91F956EF1CDA0BB0000CFA22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F956EE1CDA0BB0000CFA22 /* main.m */; };
 		91F956F21CDA0BB0000CFA22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F956F11CDA0BB0000CFA22 /* AppDelegate.m */; };
 		91F956F51CDA0BB0000CFA22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F956F41CDA0BB0000CFA22 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		913899E11CDDFF45003BC324 /* ALObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALObject.h; sourceTree = "<group>"; };
 		913899E21CDDFF45003BC324 /* ALObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALObject.m; sourceTree = "<group>"; };
+		913899E41CDE2C68003BC324 /* ALStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALStudent.h; sourceTree = "<group>"; };
+		913899E51CDE2C68003BC324 /* ALStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALStudent.m; sourceTree = "<group>"; };
 		91F956EA1CDA0BB0000CFA22 /* BlocksTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocksTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F956EE1CDA0BB0000CFA22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91F956F01CDA0BB0000CFA22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 			children = (
 				91F956F01CDA0BB0000CFA22 /* AppDelegate.h */,
 				91F956F11CDA0BB0000CFA22 /* AppDelegate.m */,
+				913899E41CDE2C68003BC324 /* ALStudent.h */,
+				913899E51CDE2C68003BC324 /* ALStudent.m */,
 				913899E11CDDFF45003BC324 /* ALObject.h */,
 				913899E21CDDFF45003BC324 /* ALObject.m */,
 				91F956F31CDA0BB0000CFA22 /* ViewController.h */,
@@ -156,6 +161,7 @@
 			files = (
 				91F956F51CDA0BB0000CFA22 /* ViewController.m in Sources */,
 				913899E31CDDFF45003BC324 /* ALObject.m in Sources */,
+				913899E61CDE2C68003BC324 /* ALStudent.m in Sources */,
 				91F956F21CDA0BB0000CFA22 /* AppDelegate.m in Sources */,
 				91F956EF1CDA0BB0000CFA22 /* main.m in Sources */,
 			);

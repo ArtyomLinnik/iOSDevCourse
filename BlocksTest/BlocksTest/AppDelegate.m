@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ALObject.h"
+#import "ALStudent.h"
+
+typedef void (^testBlock3)(void);
+typedef void (^StudentFeelsBadBlock)(id);
 
 typedef void (^OurTestBlock)(void);
 
@@ -15,8 +19,11 @@ typedef NSString* (^OurTestBlock2)(NSInteger);
 
 @interface AppDelegate ()
 
-@property (copy, nonatomic) OurTestBlock testBlock;
+@property (strong, nonatomic) ALStudent *student;
+@property (copy, nonatomic) StudentFeelsBadBlock studentFeelsBadBlock;
+@property (strong, nonatomic) NSArray* studentWhole;
 
+@property (copy, nonatomic) OurTestBlock testBlock;
 @property (strong, nonatomic) NSString* name;
 
 @end
@@ -132,18 +139,112 @@ typedef NSString* (^OurTestBlock2)(NSInteger);
      };
      
      self.testBlock();
-     */
+     
     
-    self.name = @"Hello!";
-    
-    ALObject* obj1 = [[ALObject alloc] init];
-    obj1.name = @"OBJECT";
-    
-    
+     self.name = @"Hello!";
+     
+     ALObject* obj1 = [[ALObject alloc] init];
+     obj1.name = @"OBJECT";
+     
+     
      [obj1 testMethod:^{
      NSLog(@"%@", self.name);
      }];
      
+     */
+    
+    ALStudent* Alexei = [[ALStudent alloc] init];
+    Alexei.firstName = @"Alexei";
+    Alexei.surName = @"Ivanov";
+    Alexei.temperature = 37.f;
+    
+    ALStudent* Boris = [[ALStudent alloc] init];
+    Boris.firstName = @"Boris";
+    Boris.surName = @"Alexeev";
+    Boris.temperature = 39.f;
+    
+    ALStudent* Igor = [[ALStudent alloc] init];
+    Igor.firstName = @"Igor";
+    Igor.surName = @"Mash";
+    Igor.temperature = 36.6f;
+    
+    
+    ALStudent* Ivan = [[ALStudent alloc] init];
+    Ivan.firstName = @"Ivan";
+    Ivan.surName = @"Ivanov";
+    Ivan.temperature = 37.8f;
+    
+    ALStudent* Andrew = [[ALStudent alloc] init];
+    Andrew.firstName = @"Andrew";
+    Andrew.surName = @"White";
+    Andrew.temperature = 37.f;
+    
+    ALStudent* John = [[ALStudent alloc] init];
+    John.firstName = @"John";
+    John.surName = @"Black";
+    John.temperature = 37.f;
+    
+    
+    
+    
+    self.studentWhole = [NSArray arrayWithObjects:Alexei, Boris, Igor, Ivan, Andrew, John, nil];
+    
+    self.studentWhole = [self.studentWhole sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        if ([obj1 surName] == [obj2 surName]) {
+            return [[obj1 firstName] compare:[obj2 firstName]];
+        } else {
+            return [[obj1 surName] compare:[obj2 surName]];
+        }
+
+    }];
+    
+            [self patientFeelsBad:^(id patient) {
+                if ([patient fellsBad]) {
+                    NSLog(@"Patient feels bad");
+                    NSInteger symptoms = [patient countSymptoms];
+                    
+                    if (symptoms == 3) {
+                        NSLog(@"Patient needs hospitalization");
+                    }
+                    
+                    if (symptoms == 0) {
+                        NSLog(@"Patient without symptoms, should pass tests");
+                    }
+                    
+                    if (symptoms > 0 && symptoms < 3) {
+                        if ([patient temperature] >= 37.7) {
+                            if ([patient cough]) {
+                                NSLog(@"With such symptoms patient diagnosted flu. Doctor ordered take antibiotics.");
+                            }
+                            if ([patient nausea]) {
+                                NSLog(@"With such symptoms patient diagnosted intoxication. Doctor ordered make lavage.");
+                            }
+                            if ([patient chills]) {
+                                NSLog(@"With such symptoms patient diagnosted ARD. Doctor ordered make shot.");
+                            }
+                        }
+                    }
+                    switch ([patient soreSpot]) {
+                        case 0:
+                            NSLog(@"Doctor appointed pills for headache");
+                            break;
+                            
+                        case 1:
+                            NSLog(@"Doctor appointed make inhalations");
+                            break;
+                            
+                        case 2:
+                            NSLog(@"Doctor appointed put a heating pack");
+                            break;
+                            
+                        default:
+                            NSLog(@"Patient's pain is gone");
+                            break;
+                    }
+                }
+                
+                
+            }];
 
     
     
@@ -176,6 +277,17 @@ typedef NSString* (^OurTestBlock2)(NSInteger);
     NSLog(@"testBlocksMethod");
     
     testBlock();
+}
+
+- (void) patientFeelsBad:(StudentFeelsBadBlock)patient {
+    for (ALStudent* studentID in self.studentWhole) {
+        NSLog(@" ");
+        NSLog(@"Item %d",[self.studentWhole indexOfObject:studentID]);
+        NSLog(@"-------------");
+        NSLog(@"%@", studentID);
+        
+        patient(studentID);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
