@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ALStudent.h"
+#import "ALMain.h"
 
 @interface AppDelegate ()
 
@@ -18,53 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    /*
-    NSDictionary* dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                @"Petrov", @"lastName",
-                                @"Vasiliy", @"name",
-                                [NSNumber numberWithInt:25], @"age",
-                                nil];
-    */
-    //NSDictionary dictionary2 = [NSDictionary dictionaryWithObjectsAndKeys:<#(nonnull id), ...#>, nil]
     
-    /*
-    NSInteger number = 30;
-    
-    NSDictionary* dictionary3 = @{@"lastName":@"Petrov", @"age":@25, @"speed":@(number )};
-
-    NSLog(@"%@ \ncount = %d", dictionary3, [dictionary3 count]);
-    
-    for (NSString* key in [dictionary3 allKeys])
-    {
-        id obj = [dictionary3 objectForKey:key];
-        
-        NSLog(@"key = %@, value = %@", key, obj);
-    }
-    */
-    
-    ALStudent* student1 = [[ALStudent alloc] init];
-    student1.firstName = @"Raphael";
-    student1.lastName = @"Nadal";
-    student1.greetingPhrase = @"Vamos!";
-    
-    ALStudent* student2 = [[ALStudent alloc] init];
-    student2.firstName = @"Roger";
-    student2.lastName = @"Federer";
-    student2.greetingPhrase = @"Come on!";
-    
-    NSDictionary *studentDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       student1, [student1.lastName stringByAppendingString:student1.firstName],
-                                       student2, [student2.lastName stringByAppendingString:student2.firstName],
-                                       nil];
-    
-    //NSLog(@"%@",studentDictionary);
-    
-    
-    for (NSString *keyDictionary in [studentDictionary allKeys])
-    {
-        id tempObj = [studentDictionary objectForKey:keyDictionary];
-        NSLog(@"%@", tempObj);
-    }
+    [[ALMain new] main];
     
     return YES;
 }

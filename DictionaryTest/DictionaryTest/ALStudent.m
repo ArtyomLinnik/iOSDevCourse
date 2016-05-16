@@ -7,14 +7,21 @@
 //
 
 #import "ALStudent.h"
+#import "Data.h"
 
 @implementation ALStudent
 
-- (NSString*) description
-{
-    NSString *tempString;
-    tempString = [NSString stringWithFormat:@"student's name: %@; student's surName: %@, student's phrase: %@", self.firstName, self.lastName, self.greetingPhrase];
-    return tempString;
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.name = firstNames[arc4random_uniform(51)];
+        self.lastName = lastNames[arc4random_uniform(51)];
+    }
+    return self;
+}
+
+- (void)greeting {
+    NSLog(@"The student %@ %@ says 'Hello!'", self.name, self.lastName);
 }
 
 @end

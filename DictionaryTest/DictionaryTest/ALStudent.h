@@ -10,11 +10,9 @@
 
 @interface ALStudent : NSObject
 
-@property (strong, nonatomic) NSString* firstName;
-@property (strong, nonatomic) NSString* lastName;
-@property (strong, nonatomic) NSString* greetingPhrase;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *lastName;
 
-- (NSString*) description;
-
+- (void)greeting;
 
 @end

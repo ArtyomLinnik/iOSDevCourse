@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9142201C1CEA564500D2E0CD /* ALMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9142201B1CEA564500D2E0CD /* ALMain.m */; };
 		91F4B97D1CB5645300827EA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B97C1CB5645300827EA0 /* main.m */; };
 		91F4B9801CB5645300827EA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B97F1CB5645300827EA0 /* AppDelegate.m */; };
 		91F4B9831CB5645300827EA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F4B9821CB5645300827EA0 /* ViewController.m */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		914220191CEA55A800D2E0CD /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		9142201A1CEA564500D2E0CD /* ALMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMain.h; sourceTree = "<group>"; };
+		9142201B1CEA564500D2E0CD /* ALMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMain.m; sourceTree = "<group>"; };
 		91F4B9781CB5645300827EA0 /* DictionaryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F4B97C1CB5645300827EA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91F4B97E1CB5645300827EA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +67,9 @@
 			children = (
 				91F4B9921CB57C1300827EA0 /* ALStudent.h */,
 				91F4B9931CB57C1300827EA0 /* ALStudent.m */,
+				9142201A1CEA564500D2E0CD /* ALMain.h */,
+				9142201B1CEA564500D2E0CD /* ALMain.m */,
+				914220191CEA55A800D2E0CD /* Data.h */,
 				91F4B97E1CB5645300827EA0 /* AppDelegate.h */,
 				91F4B97F1CB5645300827EA0 /* AppDelegate.m */,
 				91F4B9811CB5645300827EA0 /* ViewController.h */,
@@ -155,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F4B9831CB5645300827EA0 /* ViewController.m in Sources */,
+				9142201C1CEA564500D2E0CD /* ALMain.m in Sources */,
 				91F4B9801CB5645300827EA0 /* AppDelegate.m in Sources */,
 				91F4B9941CB57C1300827EA0 /* ALStudent.m in Sources */,
 				91F4B97D1CB5645300827EA0 /* main.m in Sources */,
@@ -308,6 +316,7 @@
 				91F4B9911CB5645300827EA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
