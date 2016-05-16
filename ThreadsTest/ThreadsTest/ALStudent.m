@@ -13,7 +13,6 @@
 @interface ALStudent ()
 
 @property (strong,nonatomic) NSMutableArray *threadArray;
-@property (assign,nonatomic) long startTime;
 
 @end
 
@@ -41,8 +40,6 @@
 }
 
 - (void)startTask {
-    
-    self.startTime = CACurrentMediaTime();
     
     long rangeThread = self.range / THREAD_COUNT;
     
@@ -73,7 +70,7 @@
     NSMutableArray *temp = self.threadArray;
     for (int i = range.location; i < range.length; i++) {
         if (i == self.number) {
-            NSLog(@"%@ found number, number equals %d during = %f",self.name, i, CACurrentMediaTime() - self.startTime);
+            NSLog(@"%@ found number, number equals %d",self.name, i);
             
             @synchronized (self) {
                 for (NSThread *thread in temp) {
@@ -88,7 +85,6 @@
 
 - (void)startTaskWithBlock:(ALStudentBlock)block {
     
-    self.startTime = CACurrentMediaTime();
     
     int rangeThread = self.range / THREAD_COUNT;
     
@@ -104,7 +100,7 @@
             for (int i = threadRange.location; i < threadRange.length; i++) {
                 if (i == self.number) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        block([NSString stringWithFormat:@"%@ found number, number equals %d during = %d",self.name, i, CACurrentMediaTime() - self.startTime]);
+                        block([NSString stringWithFormat:@"%@ found number, number equals %d",self.name, i]);
                     });
                 }
             }

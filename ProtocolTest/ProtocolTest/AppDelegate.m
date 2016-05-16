@@ -7,11 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ALPatient.h"
-#import "ALStudent.h"
-#import "ALDancer.h"
-#import "ALDeveloper.h"
-
+#import "ALMain.h"
 /*
 @interface AppDelegate ()
 
@@ -23,46 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    ALDancer* dancer1 = [[ALDancer alloc] init];
-    ALDancer* dancer2 = [[ALDancer alloc] init];
+    [[ALMain new] main];
     
-    ALStudent* student1 = [[ALStudent alloc] init];
-    ALStudent* student2 = [[ALStudent alloc] init];
-    ALStudent* student3 = [[ALStudent alloc] init];
-    
-    ALDeveloper* developer1 = [[ALDeveloper alloc] init];
-    
-    dancer1.name = @"dancer1";
-    dancer2.name = @"dancer2";
-    
-    student1.name = @"student1";
-    student2.name = @"student2";
-    student3.name = @"student3";
-    
-    developer1.name = @"developer1";
-    
-    NSArray* patients = [NSArray arrayWithObjects:dancer1, student1, developer1, student2, student3, dancer2, nil];
-    
-    for (id <ALPatient> patient in patients)
-    {
-        NSLog(@"Patient name = %@", patient.name);
-        
-        if ([patient respondsToSelector:@selector(howIsYourFamily)]) {
-            NSLog(@"How is your family? \n%@", [patient howIsYourFamily]);
-        }
-        if ([patient respondsToSelector:@selector(howIsYourJob)]) {
-            NSLog(@"How is job family? \n%@", [patient howIsYourJob]);
-        }
-        
-        
-        if (![patient areYouOK]) {
-            [patient takePill];
-            
-            if (![patient areYouOK]) {
-                [patient makeShot];
-            }
-        }
-    }
     
     return YES;
 }

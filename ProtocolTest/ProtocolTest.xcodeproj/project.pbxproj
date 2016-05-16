@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91421FFE1CEA490300D2E0CD /* ALSwimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91421FFD1CEA490300D2E0CD /* ALSwimmer.m */; };
+		914220011CEA494200D2E0CD /* ALPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 914220001CEA494200D2E0CD /* ALPerson.m */; };
+		914220051CEA4B2800D2E0CD /* ALMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 914220041CEA4B2800D2E0CD /* ALMain.m */; };
+		914220081CEA4BAC00D2E0CD /* ALRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 914220071CEA4BAC00D2E0CD /* ALRunner.m */; };
+		9142200C1CEA4CD200D2E0CD /* ALJumper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9142200B1CEA4CD200D2E0CD /* ALJumper.m */; };
+		9142200F1CEA507D00D2E0CD /* ALAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9142200E1CEA507D00D2E0CD /* ALAnimal.m */; };
+		914220121CEA50CD00D2E0CD /* ALCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 914220111CEA50CD00D2E0CD /* ALCat.m */; };
+		914220151CEA515F00D2E0CD /* ALDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 914220141CEA515F00D2E0CD /* ALDog.m */; };
+		914220181CEA51AF00D2E0CD /* ALMonkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 914220171CEA51AF00D2E0CD /* ALMonkey.m */; };
 		91B866811CB18D650068D8BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B866801CB18D650068D8BC /* main.m */; };
 		91B866841CB18D650068D8BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B866831CB18D650068D8BC /* AppDelegate.m */; };
 		91B866871CB18D650068D8BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B866861CB18D650068D8BC /* ViewController.m */; };
 		91B8668A1CB18D650068D8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B866881CB18D650068D8BC /* Main.storyboard */; };
 		91B8668C1CB18D650068D8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B8668B1CB18D650068D8BC /* Assets.xcassets */; };
 		91B8668F1CB18D650068D8BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B8668D1CB18D650068D8BC /* LaunchScreen.storyboard */; };
-		91B866981CB190920068D8BC /* ALStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B866971CB190920068D8BC /* ALStudent.m */; };
-		91B8669B1CB191250068D8BC /* ALDancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B8669A1CB191250068D8BC /* ALDancer.m */; };
-		91B8669E1CB191B60068D8BC /* ALDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B8669D1CB191B60068D8BC /* ALDeveloper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91421FFC1CEA490300D2E0CD /* ALSwimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSwimmer.h; sourceTree = "<group>"; };
+		91421FFD1CEA490300D2E0CD /* ALSwimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSwimmer.m; sourceTree = "<group>"; };
+		91421FFF1CEA494200D2E0CD /* ALPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPerson.h; sourceTree = "<group>"; };
+		914220001CEA494200D2E0CD /* ALPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPerson.m; sourceTree = "<group>"; };
+		914220021CEA4AAD00D2E0CD /* ALRunnersProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALRunnersProtocol.h; sourceTree = "<group>"; };
+		914220031CEA4B2800D2E0CD /* ALMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMain.h; sourceTree = "<group>"; };
+		914220041CEA4B2800D2E0CD /* ALMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMain.m; sourceTree = "<group>"; };
+		914220061CEA4BAC00D2E0CD /* ALRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRunner.h; sourceTree = "<group>"; };
+		914220071CEA4BAC00D2E0CD /* ALRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRunner.m; sourceTree = "<group>"; };
+		914220091CEA4C8E00D2E0CD /* ALJumpersProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALJumpersProtocol.h; sourceTree = "<group>"; };
+		9142200A1CEA4CD200D2E0CD /* ALJumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALJumper.h; sourceTree = "<group>"; };
+		9142200B1CEA4CD200D2E0CD /* ALJumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALJumper.m; sourceTree = "<group>"; };
+		9142200D1CEA507D00D2E0CD /* ALAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALAnimal.h; path = ../ALAnimal.h; sourceTree = "<group>"; };
+		9142200E1CEA507D00D2E0CD /* ALAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALAnimal.m; path = ../ALAnimal.m; sourceTree = "<group>"; };
+		914220101CEA50CD00D2E0CD /* ALCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCat.h; sourceTree = "<group>"; };
+		914220111CEA50CD00D2E0CD /* ALCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCat.m; sourceTree = "<group>"; };
+		914220131CEA515F00D2E0CD /* ALDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDog.h; sourceTree = "<group>"; };
+		914220141CEA515F00D2E0CD /* ALDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDog.m; sourceTree = "<group>"; };
+		914220161CEA51AF00D2E0CD /* ALMonkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMonkey.h; sourceTree = "<group>"; };
+		914220171CEA51AF00D2E0CD /* ALMonkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMonkey.m; sourceTree = "<group>"; };
 		91B8667C1CB18D650068D8BC /* ProtocolTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtocolTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B866801CB18D650068D8BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91B866821CB18D650068D8BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,13 +55,6 @@
 		91B8668B1CB18D650068D8BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91B8668E1CB18D650068D8BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91B866901CB18D650068D8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91B866961CB190920068D8BC /* ALStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALStudent.h; sourceTree = "<group>"; };
-		91B866971CB190920068D8BC /* ALStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALStudent.m; sourceTree = "<group>"; };
-		91B866991CB191250068D8BC /* ALDancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDancer.h; sourceTree = "<group>"; };
-		91B8669A1CB191250068D8BC /* ALDancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDancer.m; sourceTree = "<group>"; };
-		91B8669C1CB191B60068D8BC /* ALDeveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDeveloper.h; sourceTree = "<group>"; };
-		91B8669D1CB191B60068D8BC /* ALDeveloper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDeveloper.m; sourceTree = "<group>"; };
-		91B8669F1CB193B20068D8BC /* ALPatient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALPatient.h; sourceTree = "<group>"; };
 		91F4B96E1CB559BF00827EA0 /* ALSwimmers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALSwimmers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,14 +88,27 @@
 		91B8667E1CB18D650068D8BC /* ProtocolTest */ = {
 			isa = PBXGroup;
 			children = (
-				91B8669F1CB193B20068D8BC /* ALPatient.h */,
+				9142200D1CEA507D00D2E0CD /* ALAnimal.h */,
+				9142200E1CEA507D00D2E0CD /* ALAnimal.m */,
+				914220101CEA50CD00D2E0CD /* ALCat.h */,
+				914220111CEA50CD00D2E0CD /* ALCat.m */,
+				914220131CEA515F00D2E0CD /* ALDog.h */,
+				914220141CEA515F00D2E0CD /* ALDog.m */,
+				914220161CEA51AF00D2E0CD /* ALMonkey.h */,
+				914220171CEA51AF00D2E0CD /* ALMonkey.m */,
 				91F4B96E1CB559BF00827EA0 /* ALSwimmers.h */,
-				91B866961CB190920068D8BC /* ALStudent.h */,
-				91B866971CB190920068D8BC /* ALStudent.m */,
-				91B866991CB191250068D8BC /* ALDancer.h */,
-				91B8669A1CB191250068D8BC /* ALDancer.m */,
-				91B8669C1CB191B60068D8BC /* ALDeveloper.h */,
-				91B8669D1CB191B60068D8BC /* ALDeveloper.m */,
+				91421FFC1CEA490300D2E0CD /* ALSwimmer.h */,
+				91421FFD1CEA490300D2E0CD /* ALSwimmer.m */,
+				91421FFF1CEA494200D2E0CD /* ALPerson.h */,
+				914220001CEA494200D2E0CD /* ALPerson.m */,
+				914220021CEA4AAD00D2E0CD /* ALRunnersProtocol.h */,
+				914220061CEA4BAC00D2E0CD /* ALRunner.h */,
+				914220071CEA4BAC00D2E0CD /* ALRunner.m */,
+				914220031CEA4B2800D2E0CD /* ALMain.h */,
+				914220041CEA4B2800D2E0CD /* ALMain.m */,
+				914220091CEA4C8E00D2E0CD /* ALJumpersProtocol.h */,
+				9142200A1CEA4CD200D2E0CD /* ALJumper.h */,
+				9142200B1CEA4CD200D2E0CD /* ALJumper.m */,
 				91B866821CB18D650068D8BC /* AppDelegate.h */,
 				91B866831CB18D650068D8BC /* AppDelegate.m */,
 				91B866851CB18D650068D8BC /* ViewController.h */,
@@ -168,12 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914220051CEA4B2800D2E0CD /* ALMain.m in Sources */,
+				914220181CEA51AF00D2E0CD /* ALMonkey.m in Sources */,
+				914220151CEA515F00D2E0CD /* ALDog.m in Sources */,
 				91B866871CB18D650068D8BC /* ViewController.m in Sources */,
-				91B8669E1CB191B60068D8BC /* ALDeveloper.m in Sources */,
+				914220011CEA494200D2E0CD /* ALPerson.m in Sources */,
+				9142200C1CEA4CD200D2E0CD /* ALJumper.m in Sources */,
 				91B866841CB18D650068D8BC /* AppDelegate.m in Sources */,
-				91B866981CB190920068D8BC /* ALStudent.m in Sources */,
+				914220121CEA50CD00D2E0CD /* ALCat.m in Sources */,
 				91B866811CB18D650068D8BC /* main.m in Sources */,
-				91B8669B1CB191250068D8BC /* ALDancer.m in Sources */,
+				914220081CEA4BAC00D2E0CD /* ALRunner.m in Sources */,
+				9142200F1CEA507D00D2E0CD /* ALAnimal.m in Sources */,
+				91421FFE1CEA490300D2E0CD /* ALSwimmer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,6 @@
 
 @interface ALStudentSuperman()
 
-@property (assign, nonatomic) double startTime;
-
 @end
 
 @implementation ALStudentSuperman
@@ -41,8 +39,6 @@
 
 - (void)startTask {
     
-    self.startTime = CACurrentMediaTime();
-    
     int rangeThread = self.range / THREAD_COUNT;
     
     int startPoint = 0;
@@ -66,7 +62,7 @@
     NSRange range = [threadObj rangeValue];
     for (int i = range.location; i < range.length; i++) {
         if (i == self.number) {
-            NSLog(@"%@ found number, number equals %d during = %f",self.name, i, CACurrentMediaTime() - self.startTime);
+            NSLog(@"%@ found number, number equals %d",self.name, i);
             
         }
     }

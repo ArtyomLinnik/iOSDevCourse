@@ -6,16 +6,23 @@
 //  Copyright © 2016 Artyom Linnik. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ALMain.h"
 
 @protocol ALSwimmers <NSObject>
 
+
 @required
-@property (assign, nonatomic) CGFloat speed;
-@property (assign, nonatomic) NSInteger number;
-- (void) swim;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *lastName;
+@property (assign, nonatomic) NSInteger speedOfSwimming;
+
+- (void)swim;
 
 @optional
-- (NSString*) howDoYouFeel;
+@property (assign, nonatomic) NSInteger speedRun;
+@property (assign, nonatomic) NSInteger heightOfTheJump;
+
+- (void)run;
+- (void)jump;
 
 @end
