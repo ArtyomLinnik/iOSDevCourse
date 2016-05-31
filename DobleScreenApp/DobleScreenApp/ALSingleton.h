@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALSingleton : UIViewController
+@interface ALSingleton : NSObject
+{
+    NSString *currentString;
+}
+
+
++ (ALSingleton *) sharedInstance;
+
+- (void)setStringMeth:(NSString *)string;
+
+- (NSString *)currentString;
 
 @end

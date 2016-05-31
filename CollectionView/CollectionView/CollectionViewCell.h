@@ -10,4 +10,6 @@
 
 @interface CollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *textLable;
+
 @end

@@ -10,4 +10,30 @@
 
 @implementation ALSingleton
 
++ (ALSingleton *) sharedInstance
+{
+    static ALSingleton *sharedInstance = nil;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[ALSingleton alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (void)setStringMeth:(NSString *)string
+{
+    @synchronized(self) {
+        currentString = string;
+        }
+}
+
+- (NSString *)currentString
+{
+    @synchronized(self) {
+        return currentString;
+    }
+}
+
+
 @end

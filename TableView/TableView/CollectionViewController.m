@@ -8,6 +8,11 @@
 
 #import "CollectionViewController.h"
 
+@interface CollectionViewController()
+
+@property (strong, nonatomic) NSMutableArray *array1;
+
+@end
 
 
 @implementation CollectionViewController
@@ -15,14 +20,43 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.array1 = [NSMutableArray new];
+    for (int i = 0 ; i<20; i++) {
+        [self.array1 addObject:[NSString stringWithFormat:@"%i",i]];
+    }
+
+    
 }
 
-- (void)didReceiveMemoryWarning
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 1;
+}
+
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.array1.count;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(150,150);
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+    
+    CGRect labelFrame = CGRectMake(0,0 , 100, 40);
+    UILabel *myLabel = [cell viewWithTag:1];
+    [myLabel setBackgroundColor:[UIColor orangeColor]];
+    myLabel.text = @"1";
+    
+    
+    return cell;
 }
 
 @end

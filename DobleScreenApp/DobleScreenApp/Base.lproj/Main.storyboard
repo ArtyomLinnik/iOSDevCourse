@@ -43,12 +43,12 @@
                     <navigationItem key="navigationItem" title="Table" id="wlA-RA-gwi"/>
                     <connections>
                         <outlet property="myTableView" destination="eRp-0z-0qk" id="CYP-Vo-MeY"/>
-                        <segue destination="1kI-II-RpT" kind="push" identifier="TableViewController" id="NV7-g7-uYX"/>
+                        <segue destination="1kI-II-RpT" kind="push" identifier="viewSegue" id="NV7-g7-uYX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHo-S8-f2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="-761"/>
+            <point key="canvasLocation" x="2033" y="-773"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ju9-TU-PKM">
@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="XXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-tf-YsT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIA-tf-YsT">
                                 <rect key="frame" x="174" y="204" width="252" height="191"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="252" id="sJV-Ug-LUE"/>
@@ -80,10 +80,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EW2-kU-gZu"/>
+                    <connections>
+                        <outlet property="navbar" destination="EW2-kU-gZu" id="1Ax-5K-cDU"/>
+                        <outlet property="numberLabel" destination="nIA-tf-YsT" id="irW-hJ-eRr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgU-lL-2Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1875" y="-761"/>
+            <point key="canvasLocation" x="2791" y="-773"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U0D-Pr-n4s">
@@ -101,7 +105,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbn-YU-N7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="-797"/>
+            <point key="canvasLocation" x="1267" y="-773"/>
         </scene>
     </scenes>
 </document>

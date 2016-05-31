@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *navbar;
+
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+
+@property (strong, nonatomic) NSString *numberLabelContents;
+
 @end
