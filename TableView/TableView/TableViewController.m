@@ -30,7 +30,7 @@
     self.array1 = [NSMutableArray new];
     for (int i = 0 ; i<20; i++) {
         [self.array1 addObject:[NSString stringWithFormat:@"%i",i]];
-        self.array1 = [NSMutableArray arrayWithObjects:@"%d",i, nil];
+       // self.array1 = [NSMutableArray arrayWithObjects:@"%d",i, nil];
     }
     
     

@@ -12,7 +12,8 @@
 
 @interface TableViewController()
 
-@property (strong, nonatomic) NSMutableArray *number;
+@property (strong, nonatomic) NSMutableArray *name;
+@property (strong, nonatomic) NSMutableArray *thumbnails;
 
 @end
 
@@ -30,9 +31,10 @@
     self.title = @"Numbers";
     
     
-    self.number = [NSMutableArray new];
-    for (int i = 0 ; i<20; i++) {
-        [self.number addObject:[NSString stringWithFormat:@"%i",i]];
+    self.name = [NSMutableArray new];
+    for (int i = 0 ; i<30; i++) {
+        [self.name addObject:[NSString stringWithFormat:@"space3_%i",i+1]];
+        [self.thumbnails addObject:[NSString stringWithFormat:@"space3_%i.JPG",i+1]];
     }
     
 }
@@ -50,7 +52,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.number.count;
+    return self.name.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,7 +61,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.number objectAtIndex:[indexPath row]];
+    
+    if (cell==nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = [self.name objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"space3_1.JPG"];
+    
     
     return cell;
 }
@@ -71,10 +80,10 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.number objectAtIndex:[indexPath row]];
+    cell.textLabel.text = [self.name objectAtIndex:indexPath.row];
     
     ALSingleton *singleton = [ALSingleton sharedInstance];
-    [singleton setStringMeth: [self.number objectAtIndex:[indexPath row]]];
+    [singleton setStringMeth: [self.name objectAtIndex:indexPath.row]];
     
     
     [self performSegueWithIdentifier:@"viewSegue" sender:self];
@@ -86,6 +95,7 @@
         
         ALSingleton *singleton = [ALSingleton sharedInstance];
         
+        
         NSString *lableString = [singleton currentString];
         
         [[segue destinationViewController] setNumberLabelContents:lableString];
@@ -93,5 +103,6 @@
     }
 
 }
+
 
 @end

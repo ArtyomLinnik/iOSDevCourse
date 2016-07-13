@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bbv-ol-V2R" userLabel="changeCircleSegmentControl">
+                                <rect key="frame" x="61" y="263" width="199" height="29"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Middle"/>
+                                    <segment title="Large"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="choiceCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Wv3-Pv-8op"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66W-Yd-aj5" userLabel="scaleLabel">
+                                <rect key="frame" x="20" y="295" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh7-f6-mbE" userLabel="scaleSizeLabel">
+                                <rect key="frame" x="261" y="295" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-Rw-Ygr" userLabel="scaleSlider">
+                                <rect key="frame" x="18" y="311" width="284" height="34"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="changeScaleCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="fub-XB-Xh0"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaA-3i-TgY" userLabel="speedLabel">
+                                <rect key="frame" x="20" y="201" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOY-XE-B2P" userLabel="speedSizeLabel">
+                                <rect key="frame" x="261" y="201" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="QAQ-PX-bFc" userLabel="speedSlider">
+                                <rect key="frame" x="18" y="218" width="284" height="34"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="changeSpeedCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Yb-rh-6GW"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color circle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfQ-OP-FWx" userLabel="colorLabel">
+                                <rect key="frame" x="20" y="347" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VS-GD-kiC" userLabel="colorRedLabel">
+                                <rect key="frame" x="20" y="360" width="34" height="21"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.83466372280000001" green="0.02014739191" blue="0.032294214029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmK-P0-gIB" userLabel="colorRedSizeLabel">
+                                <rect key="frame" x="261" y="360" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.83466372280000001" green="0.02014739191" blue="0.032294214029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f9Z-6y-L9t" userLabel="colorRedSlider">
+                                <rect key="frame" x="18" y="377" width="284" height="34"/>
+                                <color key="tintColor" red="0.83466372280000001" green="0.02014739191" blue="0.032294214029999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColorRedCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="zXo-MD-VlA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWC-Lj-Frw" userLabel="colorGreenLabel">
+                                <rect key="frame" x="20" y="412" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.4359033906" green="1" blue="0.31867544399999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wy-F3-wob" userLabel="colorGreenSizeLabel">
+                                <rect key="frame" x="261" y="413" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.34138227980000002" green="1" blue="0.28307872569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JQF-fN-Rye" userLabel="colorGreenSlider">
+                                <rect key="frame" x="18" y="428" width="284" height="34"/>
+                                <color key="tintColor" red="0.2841456416" green="1" blue="0.3151938863" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColorGreenCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xRl-tF-5X6"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuI-13-N8U" userLabel="colorBlueLabel">
+                                <rect key="frame" x="20" y="468" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.25938704689999997" green="0.4076290575" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zo-WD-kRg" userLabel="colorBlueSizeLabel">
+                                <rect key="frame" x="261" y="468" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.25938704689999997" green="0.4076290575" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DSg-Ga-5rJ" userLabel="colorBlueSlider">
+                                <rect key="frame" x="18" y="482" width="284" height="34"/>
+                                <color key="tintColor" red="0.25938704689999997" green="0.4076290575" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColorBlueCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="vuO-ca-1mJ"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-fj-R3s" userLabel="startSwitch">
+                                <rect key="frame" x="56" y="517" width="51" height="31"/>
+                                <connections>
+                                    <action selector="startMoveCircleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="51d-vt-YmI"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnH-bp-0WH" userLabel="startLabel">
+                                <rect key="frame" x="20" y="522" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80G-1o-jww" userLabel="visibleSwitch">
+                                <rect key="frame" x="251" y="517" width="51" height="31"/>
+                                <connections>
+                                    <action selector="visibleAnyControlsAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="QsR-1j-5gn"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visible" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-YL-TjL" userLabel="visibleLabel">
+                                <rect key="frame" x="201" y="522" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="choiceCircleSegmentedControl" destination="Bbv-ol-V2R" id="o6W-3G-M6m"/>
+                        <outlet property="colorBlueLabel" destination="LuI-13-N8U" id="pMe-SZ-rZm"/>
+                        <outlet property="colorBlueSizeLabel" destination="6zo-WD-kRg" id="V0j-xg-V2J"/>
+                        <outlet property="colorBlueSlider" destination="DSg-Ga-5rJ" id="3s9-rW-9sW"/>
+                        <outlet property="colorGreenLabel" destination="LWC-Lj-Frw" id="v3Y-0I-0mI"/>
+                        <outlet property="colorGreenSizeLabel" destination="8Wy-F3-wob" id="uPP-rM-4cd"/>
+                        <outlet property="colorGreenSlider" destination="JQF-fN-Rye" id="qQA-WY-iw9"/>
+                        <outlet property="colorLabel" destination="IfQ-OP-FWx" id="vKw-FX-pmV"/>
+                        <outlet property="colorRedLabel" destination="5VS-GD-kiC" id="gd5-d6-89S"/>
+                        <outlet property="colorRedSizeLabel" destination="YmK-P0-gIB" id="6wt-dF-Wu9"/>
+                        <outlet property="colorRedSlider" destination="f9Z-6y-L9t" id="PYa-Mh-9sX"/>
+                        <outlet property="scaleLabel" destination="66W-Yd-aj5" id="5Ad-q5-t7K"/>
+                        <outlet property="scaleSizeLabel" destination="Jh7-f6-mbE" id="3jr-5H-Orh"/>
+                        <outlet property="scaleSlider" destination="Ygt-Rw-Ygr" id="tgY-fS-LwE"/>
+                        <outlet property="speedLabel" destination="NaA-3i-TgY" id="aor-zv-jbV"/>
+                        <outlet property="speedSizeLabel" destination="zOY-XE-B2P" id="HI6-Tr-ua2"/>
+                        <outlet property="speedSlider" destination="QAQ-PX-bFc" id="mch-i7-sAh"/>
+                        <outlet property="startLabel" destination="lnH-bp-0WH" id="Xoe-xa-cD4"/>
+                        <outlet property="startSwitch" destination="ZEy-fj-R3s" id="9KF-wO-0YF"/>
+                        <outlet property="visibleLabel" destination="EOl-YL-TjL" id="Za7-DH-SQq"/>
+                        <outlet property="visibleSwitch" destination="80G-1o-jww" id="ocn-TB-n7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="394"/>
+        </scene>
+    </scenes>
+</document>
