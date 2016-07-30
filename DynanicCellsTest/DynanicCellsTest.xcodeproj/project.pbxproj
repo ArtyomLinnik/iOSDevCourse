@@ -15,6 +15,8 @@
 		91FC71E61D41069600C3D0EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FC71E41D41069600C3D0EA /* LaunchScreen.storyboard */; };
 		91FC71F11D41069600C3D0EA /* DynanicCellsTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FC71F01D41069600C3D0EA /* DynanicCellsTestTests.m */; };
 		91FC71FC1D41069600C3D0EA /* DynanicCellsTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FC71FB1D41069600C3D0EA /* DynanicCellsTestUITests.m */; };
+		91FC720B1D4107EE00C3D0EA /* ALStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FC720A1D4107EE00C3D0EA /* ALStudent.m */; };
+		91FC720E1D410A7200C3D0EA /* ALObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FC720D1D410A7200C3D0EA /* ALObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		91FC71F71D41069600C3D0EA /* DynanicCellsTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynanicCellsTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FC71FB1D41069600C3D0EA /* DynanicCellsTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynanicCellsTestUITests.m; sourceTree = "<group>"; };
 		91FC71FD1D41069600C3D0EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FC72091D4107EE00C3D0EA /* ALStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALStudent.h; path = ../ALStudent.h; sourceTree = "<group>"; };
+		91FC720A1D4107EE00C3D0EA /* ALStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALStudent.m; path = ../ALStudent.m; sourceTree = "<group>"; };
+		91FC720C1D410A7200C3D0EA /* ALObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALObject.h; sourceTree = "<group>"; };
+		91FC720D1D410A7200C3D0EA /* ALObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 		91FC71D51D41069600C3D0EA /* DynanicCellsTest */ = {
 			isa = PBXGroup;
 			children = (
+				91FC720C1D410A7200C3D0EA /* ALObject.h */,
+				91FC720D1D410A7200C3D0EA /* ALObject.m */,
+				91FC72091D4107EE00C3D0EA /* ALStudent.h */,
+				91FC720A1D4107EE00C3D0EA /* ALStudent.m */,
 				91FC71D91D41069600C3D0EA /* AppDelegate.h */,
 				91FC71DA1D41069600C3D0EA /* AppDelegate.m */,
 				91FC71DC1D41069600C3D0EA /* ViewController.h */,
@@ -275,6 +285,8 @@
 			files = (
 				91FC71DE1D41069600C3D0EA /* ViewController.m in Sources */,
 				91FC71DB1D41069600C3D0EA /* AppDelegate.m in Sources */,
+				91FC720B1D4107EE00C3D0EA /* ALStudent.m in Sources */,
+				91FC720E1D410A7200C3D0EA /* ALObject.m in Sources */,
 				91FC71D81D41069600C3D0EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

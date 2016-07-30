@@ -15,6 +15,8 @@
 		91BA334A1D415B650006B9D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BA33481D415B650006B9D4 /* LaunchScreen.storyboard */; };
 		91BA33551D415B650006B9D4 /* TableEditingTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BA33541D415B650006B9D4 /* TableEditingTestTests.m */; };
 		91BA33601D415B650006B9D4 /* TableEditingTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BA335F1D415B650006B9D4 /* TableEditingTestUITests.m */; };
+		91BA336F1D4161300006B9D4 /* ALStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BA336E1D4161300006B9D4 /* ALStudent.m */; };
+		91BA33731D41617C0006B9D4 /* ALGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BA33721D41617C0006B9D4 /* ALGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		91BA335B1D415B650006B9D4 /* TableEditingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableEditingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BA335F1D415B650006B9D4 /* TableEditingTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableEditingTestUITests.m; sourceTree = "<group>"; };
 		91BA33611D415B650006B9D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91BA336D1D4161300006B9D4 /* ALStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALStudent.h; sourceTree = "<group>"; };
+		91BA336E1D4161300006B9D4 /* ALStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALStudent.m; sourceTree = "<group>"; };
+		91BA33711D41617C0006B9D4 /* ALGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGroup.h; sourceTree = "<group>"; };
+		91BA33721D41617C0006B9D4 /* ALGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		91BA33391D415B650006B9D4 /* TableEditingTest */ = {
 			isa = PBXGroup;
 			children = (
+				91BA33701D41614B0006B9D4 /* Models */,
 				91BA333D1D415B650006B9D4 /* AppDelegate.h */,
 				91BA333E1D415B650006B9D4 /* AppDelegate.m */,
 				91BA33401D415B650006B9D4 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				91BA33611D415B650006B9D4 /* Info.plist */,
 			);
 			path = TableEditingTestUITests;
+			sourceTree = "<group>";
+		};
+		91BA33701D41614B0006B9D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91BA33711D41617C0006B9D4 /* ALGroup.h */,
+				91BA33721D41617C0006B9D4 /* ALGroup.m */,
+				91BA336D1D4161300006B9D4 /* ALStudent.h */,
+				91BA336E1D4161300006B9D4 /* ALStudent.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91BA33421D415B650006B9D4 /* ViewController.m in Sources */,
+				91BA33731D41617C0006B9D4 /* ALGroup.m in Sources */,
 				91BA333F1D415B650006B9D4 /* AppDelegate.m in Sources */,
+				91BA336F1D4161300006B9D4 /* ALStudent.m in Sources */,
 				91BA333C1D415B650006B9D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

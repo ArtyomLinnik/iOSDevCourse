@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ALObject : NSObject
+
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) UIColor *color;
 
 @end

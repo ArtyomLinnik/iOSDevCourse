@@ -10,4 +10,7 @@
 
 @interface ALGroup : NSObject
 
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSArray *students;
+
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALStudent : UITableViewController
+@interface ALStudent : NSObject
+
+@property (strong, nonatomic) NSString *firstName;
+@property (strong, nonatomic) NSString *secondName;
+@property (assign, nonatomic) CGFloat averageMark;
 
 @end
