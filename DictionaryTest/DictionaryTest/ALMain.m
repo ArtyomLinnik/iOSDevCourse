@@ -55,7 +55,7 @@
     }
     
     NSDictionary *journal = [NSDictionary dictionaryWithObjects:arrayOfStudents forKeys:arrayOfKeys];
-    
+	
     for (NSString *key in [journal allKeys]) {
         id object = journal[key];
         if (![object isKindOfClass:[ALStudent class]]) {

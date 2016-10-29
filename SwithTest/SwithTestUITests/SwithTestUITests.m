@@ -1,6 +1,6 @@
 //
-//  SwithTestUITests.m
-//  SwithTestUITests
+//  SwitchTestUITests.m
+//  SwitchTestUITests
 //
 //  Created by Artyom Linnik on 26/05/16.
 //  Copyright © 2016 Artyom Linnik. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface SwithTestUITests : XCTestCase
+@interface SwitchTestUITests : XCTestCase
 
 @end
 
-@implementation SwithTestUITests
+@implementation SwitchTestUITests
 
 - (void)setUp {
     [super setUp];
