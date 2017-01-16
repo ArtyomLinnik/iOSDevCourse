@@ -413,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImageDownload/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AL.ImageDownload;
@@ -424,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImageDownload/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AL.ImageDownload;
@@ -496,6 +498,7 @@
 				913BED691CE3A72F00A4CA0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913BED6A1CE3A72F00A4CA0A /* Build configuration list for PBXNativeTarget "ImageDownloadTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +507,7 @@
 				913BED6C1CE3A72F00A4CA0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913BED6D1CE3A72F00A4CA0A /* Build configuration list for PBXNativeTarget "ImageDownloadUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +516,7 @@
 				913BED6F1CE3A72F00A4CA0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

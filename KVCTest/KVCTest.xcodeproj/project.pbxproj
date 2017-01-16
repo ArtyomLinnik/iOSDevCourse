@@ -15,6 +15,8 @@
 		91FDBF5E1D5E105E00C41EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FDBF5C1D5E105E00C41EEF /* LaunchScreen.storyboard */; };
 		91FDBF691D5E105E00C41EEF /* KVCTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FDBF681D5E105E00C41EEF /* KVCTestTests.m */; };
 		91FDBF741D5E105E00C41EEF /* KVCTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FDBF731D5E105E00C41EEF /* KVCTestUITests.m */; };
+		9A34402E1DF2DE0500FCC8AA /* ALGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34402D1DF2DE0500FCC8AA /* ALGroup.m */; };
+		9AE6FCC41DEC1F4C00702877 /* ALStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6FCC31DEC1F4C00702877 /* ALStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		91FDBF6F1D5E105E00C41EEF /* KVCTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVCTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FDBF731D5E105E00C41EEF /* KVCTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTestUITests.m; sourceTree = "<group>"; };
 		91FDBF751D5E105E00C41EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A34402C1DF2DE0500FCC8AA /* ALGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALGroup.h; path = ../ALGroup.h; sourceTree = "<group>"; };
+		9A34402D1DF2DE0500FCC8AA /* ALGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALGroup.m; path = ../ALGroup.m; sourceTree = "<group>"; };
+		9AE6FCC21DEC1F4C00702877 /* ALStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALStudent.h; sourceTree = "<group>"; };
+		9AE6FCC31DEC1F4C00702877 /* ALStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,14 @@
 		91FDBF4D1D5E105E00C41EEF /* KVCTest */ = {
 			isa = PBXGroup;
 			children = (
+				9A34402C1DF2DE0500FCC8AA /* ALGroup.h */,
+				9A34402D1DF2DE0500FCC8AA /* ALGroup.m */,
 				91FDBF511D5E105E00C41EEF /* AppDelegate.h */,
 				91FDBF521D5E105E00C41EEF /* AppDelegate.m */,
 				91FDBF541D5E105E00C41EEF /* ViewController.h */,
 				91FDBF551D5E105E00C41EEF /* ViewController.m */,
+				9AE6FCC21DEC1F4C00702877 /* ALStudent.h */,
+				9AE6FCC31DEC1F4C00702877 /* ALStudent.m */,
 				91FDBF571D5E105E00C41EEF /* Main.storyboard */,
 				91FDBF5A1D5E105E00C41EEF /* Assets.xcassets */,
 				91FDBF5C1D5E105E00C41EEF /* LaunchScreen.storyboard */,
@@ -274,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FDBF561D5E105E00C41EEF /* ViewController.m in Sources */,
+				9A34402E1DF2DE0500FCC8AA /* ALGroup.m in Sources */,
 				91FDBF531D5E105E00C41EEF /* AppDelegate.m in Sources */,
+				9AE6FCC41DEC1F4C00702877 /* ALStudent.m in Sources */,
 				91FDBF501D5E105E00C41EEF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Q78V6U8FD;
 				INFOPLIST_FILE = KVCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AL.KVCTest;
@@ -427,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Q78V6U8FD;
 				INFOPLIST_FILE = KVCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AL.KVCTest;
@@ -499,6 +513,7 @@
 				91FDBF7A1D5E105E00C41EEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91FDBF7B1D5E105E00C41EEF /* Build configuration list for PBXNativeTarget "KVCTestTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +522,7 @@
 				91FDBF7D1D5E105E00C41EEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91FDBF7E1D5E105E00C41EEF /* Build configuration list for PBXNativeTarget "KVCTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +531,7 @@
 				91FDBF801D5E105E00C41EEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
