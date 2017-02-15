@@ -8,12 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+@class ALUser;
+
 @interface ALServerManager : NSObject
+
+@property (strong, nonatomic) ALUser *user;
 
 + (ALServerManager *)sharedManager;
 
-- (void)getFriendsWithOffset:(NSInteger)offset count:(NSInteger)count
+- (void)authorizeUser:(void(^)(ALUser *user))completion;
+
+- (void)getFriendsWithOffset:(NSInteger)offset
+					   count:(NSInteger)count
 				   onSuccess:(void(^)(NSArray *friends))success
 				   onFailure:(void(^)(NSError *error, NSInteger statusCode))failure;
+
+
+- (void)getUser:(NSString *)userID
+	  onSuccess:(void(^)(ALUser *user))success
+	  onFailure:(void(^)(NSError *error, NSInteger statusCode))failure;
 
 @end

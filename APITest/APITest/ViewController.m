@@ -8,23 +8,44 @@
 
 #import "ViewController.h"
 #import "ALServerManager.h"
+#import "ALUser.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface ViewController ()
 
 @property (strong, nonatomic) NSMutableArray *friendsArray;
+@property (assign, nonatomic) BOOL firstTimeAppear;
 
 @end
 
 @implementation ViewController
 
-static NSInteger friendsInRequest = 5;
+static NSInteger friendsInRequest = 20;
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
 	self.friendsArray = [NSMutableArray array];
 	
-	[self getFriendsFromServer];
+	//[self getFriendsFromServer];
+	
+	self.firstTimeAppear = YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:YES];
+	
+	if (self.firstTimeAppear) {
+		self.firstTimeAppear = NO;
+		
+		[[ALServerManager sharedManager] authorizeUser:^(ALUser *user) {
+			NSLog(@"AUTHORIZED!");
+			NSLog(@"%@ %@", user.firstName, user.lastName);
+		}];
+	}
+	
+	
 }
 
 
@@ -60,7 +81,7 @@ static NSInteger friendsInRequest = 5;
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return self.friendsArray.count;
+	return self.friendsArray.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,7 +94,43 @@ static NSInteger friendsInRequest = 5;
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 	}
 	
+	if (indexPath.row == self.friendsArray.count) {
+		cell.textLabel.text = @"LOAD MORE";
+		cell.imageView.image = nil;
+	} else {
+	
+		ALUser *friend = [self.friendsArray  objectAtIndex:indexPath.row];
+	
+		cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", friend.firstName, friend.lastName];
+		
+		NSURLRequest *request =  [NSURLRequest requestWithURL:friend.imageURL];
+		
+		__weak UITableViewCell *weakCell = cell;
+		
+		cell.imageView.image = nil;
+		
+		[cell.imageView setImageWithURLRequest:request
+							  placeholderImage:nil
+									   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+										   weakCell.imageView.image = image;
+										   [weakCell layoutSubviews];
+									   }
+									   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+										   
+									   }];
+	}
 	return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	if (indexPath.row == self.friendsArray.count) {
+		[self getFriendsFromServer];
+	}
 }
 
 
