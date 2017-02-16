@@ -10,6 +10,10 @@
 		1187824AC84C72BFCC9D8610 /* libPods-APITest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531A248476FFEF941869774 /* libPods-APITest.a */; };
 		19DD1E601244E4F0E2271A8D /* libPods-APITestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD99F1FAD85FAFDFEA2853E /* libPods-APITestUITests.a */; };
 		41ADDCE7BCB8CCE8DFE35DF3 /* libPods-APITestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A457AD42453CF81735F539E /* libPods-APITestTests.a */; };
+		9A02844C1E5490C400476271 /* ALPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A02844B1E5490C400476271 /* ALPost.m */; };
+		9A0284501E5492FB00476271 /* ALServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A02844F1E5492FB00476271 /* ALServerObject.m */; };
+		9A0284531E54A80C00476271 /* ALGroupWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0284521E54A80C00476271 /* ALGroupWallViewController.m */; };
+		9A054DC11E5501980091E3A3 /* ALPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A054DC01E5501980091E3A3 /* ALPostCell.m */; };
 		9A0649671E52EABD0062FB56 /* ALUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0649661E52EABD0062FB56 /* ALUser.m */; };
 		9A06496A1E5306880062FB56 /* ALUserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A0649691E5306880062FB56 /* ALUserLoginViewController.m */; };
 		9A06496D1E5307CA0062FB56 /* ALAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A06496C1E5307CA0062FB56 /* ALAccessToken.m */; };
@@ -48,6 +52,14 @@
 		4F5D65FB654B44E2D692C57A /* Pods-APITestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APITestTests/Pods-APITestTests.release.xcconfig"; sourceTree = "<group>"; };
 		8531A248476FFEF941869774 /* libPods-APITest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APITest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BF25F1C2DBE29659D47FF3C /* Pods-APITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APITest/Pods-APITest.debug.xcconfig"; sourceTree = "<group>"; };
+		9A02844A1E5490C400476271 /* ALPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPost.h; sourceTree = "<group>"; };
+		9A02844B1E5490C400476271 /* ALPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPost.m; sourceTree = "<group>"; };
+		9A02844E1E5492FB00476271 /* ALServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALServerObject.h; sourceTree = "<group>"; };
+		9A02844F1E5492FB00476271 /* ALServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALServerObject.m; sourceTree = "<group>"; };
+		9A0284511E54A80C00476271 /* ALGroupWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGroupWallViewController.h; sourceTree = "<group>"; };
+		9A0284521E54A80C00476271 /* ALGroupWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGroupWallViewController.m; sourceTree = "<group>"; };
+		9A054DBF1E5501980091E3A3 /* ALPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPostCell.h; sourceTree = "<group>"; };
+		9A054DC01E5501980091E3A3 /* ALPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPostCell.m; sourceTree = "<group>"; };
 		9A0649651E52EABD0062FB56 /* ALUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUser.h; sourceTree = "<group>"; };
 		9A0649661E52EABD0062FB56 /* ALUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUser.m; sourceTree = "<group>"; };
 		9A0649681E5306880062FB56 /* ALUserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUserLoginViewController.h; sourceTree = "<group>"; };
@@ -107,6 +119,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A02844D1E54926D00476271 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A02844A1E5490C400476271 /* ALPost.h */,
+				9A02844B1E5490C400476271 /* ALPost.m */,
+				9A0649651E52EABD0062FB56 /* ALUser.h */,
+				9A0649661E52EABD0062FB56 /* ALUser.m */,
+				9A02844E1E5492FB00476271 /* ALServerObject.h */,
+				9A02844F1E5492FB00476271 /* ALServerObject.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9A054DC31E5502270091E3A3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9A054DBF1E5501980091E3A3 /* ALPostCell.h */,
+				9A054DC01E5501980091E3A3 /* ALPostCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		9AEDE6731E308FF2008EED0A = {
 			isa = PBXGroup;
 			children = (
@@ -136,15 +170,17 @@
 				9AEDE6831E308FF2008EED0A /* AppDelegate.m */,
 				9AEDE6851E308FF2008EED0A /* ViewController.h */,
 				9AEDE6861E308FF2008EED0A /* ViewController.m */,
-				9A0649651E52EABD0062FB56 /* ALUser.h */,
-				9A0649661E52EABD0062FB56 /* ALUser.m */,
+				9A02844D1E54926D00476271 /* Models */,
 				9AEDE6881E308FF2008EED0A /* Main.storyboard */,
 				9AEDE6B71E3096E3008EED0A /* ALServerManager.h */,
 				9AEDE6B81E3096E3008EED0A /* ALServerManager.m */,
+				9A0284511E54A80C00476271 /* ALGroupWallViewController.h */,
+				9A0284521E54A80C00476271 /* ALGroupWallViewController.m */,
 				9A0649681E5306880062FB56 /* ALUserLoginViewController.h */,
 				9A0649691E5306880062FB56 /* ALUserLoginViewController.m */,
 				9A06496B1E5307CA0062FB56 /* ALAccessToken.h */,
 				9A06496C1E5307CA0062FB56 /* ALAccessToken.m */,
+				9A054DC31E5502270091E3A3 /* Cells */,
 				9AEDE68E1E308FF2008EED0A /* Assets.xcassets */,
 				9AEDE6901E308FF2008EED0A /* LaunchScreen.storyboard */,
 				9AEDE6931E308FF2008EED0A /* Info.plist */,
@@ -486,14 +522,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0284501E5492FB00476271 /* ALServerObject.m in Sources */,
 				9AEDE6871E308FF2008EED0A /* ViewController.m in Sources */,
 				9A0649671E52EABD0062FB56 /* ALUser.m in Sources */,
 				9A06496D1E5307CA0062FB56 /* ALAccessToken.m in Sources */,
 				9AEDE6841E308FF2008EED0A /* AppDelegate.m in Sources */,
 				9AEDE68D1E308FF2008EED0A /* APITest.xcdatamodeld in Sources */,
+				9A054DC11E5501980091E3A3 /* ALPostCell.m in Sources */,
 				9AEDE6811E308FF2008EED0A /* main.m in Sources */,
 				9A06496A1E5306880062FB56 /* ALUserLoginViewController.m in Sources */,
+				9A02844C1E5490C400476271 /* ALPost.m in Sources */,
 				9AEDE6B91E3096E3008EED0A /* ALServerManager.m in Sources */,
+				9A0284531E54A80C00476271 /* ALGroupWallViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

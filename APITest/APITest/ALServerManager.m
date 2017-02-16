@@ -8,9 +8,11 @@
 
 #import "ALServerManager.h"
 #import "AFNetworking.h"
-#import "ALUser.h"
 #import "ALUserLoginViewController.h"
 #import "ALAccessToken.h"
+
+#import "ALUser.h"
+#import "ALPost.h"
 
 @interface  ALServerManager()
 
@@ -151,15 +153,89 @@
 		 
 		
 	}];
+}
+
+- (void)getGroupWall:(NSString *)groupID
+		  withOffset:(NSInteger)offset
+			   count:(NSInteger)count
+		   onSuccess:(void(^)(NSArray *posts))success
+		   onFailure:(void(^)(NSError *error, NSInteger statusCode))failure {
 	
-//	friends.get;
-//	user_id 49644442;
-//	order name;
-//	count
-//	offset
-//	fields photo_50
-//	name_case nom
+	if ([groupID hasPrefix:@"-"]) {
+		groupID = [@"-" stringByAppendingString:groupID];
+	}
 	
+	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+							groupID,		@"owner_id",
+							@(offset),		@"offset",
+							@(count),		@"count",
+							@"all",			@"filter", nil];
+	
+	[self.sessionManager
+	 GET:@"wall.get"
+	 parameters:params progress:nil
+	 success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
+		 NSLog(@"JSON: %@", responseObject);
+		 
+		 NSArray  *dictsArray = [responseObject objectForKey:@"response"];
+		 
+		 if (dictsArray.count > 1) {
+			 dictsArray = [dictsArray subarrayWithRange:NSMakeRange(1, (int)dictsArray.count - 1)];
+		 } else {
+			 dictsArray = nil;
+		 }
+		 
+		 NSMutableArray *objectsArray =  [NSMutableArray array];
+		 
+		 for (NSDictionary *dict in dictsArray) {
+			 ALPost *user = [[ALPost  alloc] initWithServerResponse:dict];
+			 [objectsArray addObject:user];
+		 }
+		 
+		 if (success) {
+			 success(objectsArray);
+		 }
+		 
+	 } failure:^(NSURLSessionTask *operation, NSError *error) {
+		 NSLog(@"Error: %@", error);
+		 
+		 
+	 }];
+
+}
+
+- (void)postText:(NSString *)text
+	 onGroupWall:(NSString *)groupID
+	   onSuccess:(void(^)(id result))success
+	   onFailure:(void(^)(NSError *error, NSInteger statusCode))failure {
+	
+	if ([groupID hasPrefix:@"-"]) {
+		groupID = [@"-" stringByAppendingString:groupID];
+	}
+	
+	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+							groupID,				@"owner_id",
+							text,					@"message",
+							self.accessToken.token, @"access_token" ,nil];
+	
+	[self.sessionManager
+	 POST:@"wall.post"
+	 parameters:params
+	 progress:^(NSProgress * _Nonnull uploadProgress) {
+		 
+	 }
+	 success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
+		 NSLog(@"JSON: %@", responseObject);
+		 
+		 if (success) {
+			 success(responseObject);
+		 }
+		 
+	 } failure:^(NSURLSessionTask *operation, NSError *error) {
+		 NSLog(@"Error: %@", error);
+		 
+		 
+	 }];
 	
 }
 

@@ -98,7 +98,7 @@
 	
 	NSLog(@"%@", [request URL]);
 	
-	if ([[[request URL] host] isEqualToString:@"hello.there"]) {
+	if ([[[request URL] host] rangeOfString:@"#access_token="].location != NSNotFound) {
 		
 		ALAccessToken *token = [ALAccessToken new];
 		
