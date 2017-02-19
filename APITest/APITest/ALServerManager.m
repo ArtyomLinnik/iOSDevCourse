@@ -124,7 +124,7 @@
 	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
 							@"236306523",	@"user_id",
 							@"name",		@"order",
-							@ (count),		@"count",
+							@(count),		@"count",
 							@(offset),		@"offset",
 							@"photo_50",	@"fields",
 							@"nom",			@" name_case", nil];
@@ -204,8 +204,7 @@
 
 }
 
-- (void)postText:(NSString *)text
-	 onGroupWall:(NSString *)groupID
+ 	 onGroupWall:(NSString *)groupID
 	   onSuccess:(void(^)(id result))success
 	   onFailure:(void(^)(NSError *error, NSInteger statusCode))failure {
 	
@@ -222,7 +221,7 @@
 	 POST:@"wall.post"
 	 parameters:params
 	 progress:^(NSProgress * _Nonnull uploadProgress) {
-		 
+		 NSLog(@"Progress: %@", uploadProgress);
 	 }
 	 success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
 		 NSLog(@"JSON: %@", responseObject);
